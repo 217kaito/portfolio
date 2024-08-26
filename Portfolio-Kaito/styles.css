@@ -1,0 +1,90 @@
+body{
+    font-family: serif;
+}
+
+/* コンテンツを中央に揃え、コンテンツどうしの感覚を調節 */
+.center{
+    padding: 10% 5% 10% 5%;
+}
+
+h1{
+    font-size: 4rem;
+    color: white;
+
+    /*背景画像を挿入*/
+    background-image: url("images/h1-background-image.jpg");
+    background-size: cover;
+    background-position: center;
+    background-color: blue;
+
+    /*h1領域とコンテンツの位置を設定*/
+    padding: 20% 5% 5% 5%;
+}
+
+h2{
+    font-size: 2.5rem;
+    margin-bottom: 5%;
+}
+
+/* 背景色を紫紺にするコンテンツの設定 */
+.purple{
+    background-color: rgb(63, 0, 152);
+    background-size: cover;
+    color: white;
+}
+
+/* アイコン画像の大きさを設定 */
+#my_icon{
+    width: 30%;
+    height: 30%;
+}
+
+/*画像を中央に配置(もっといい方法ありそう)*/
+.images{
+    padding: 0 0 0 35%;
+}
+
+/* ビューポートが800px以上ならアイコン画像と文章を横並びで配置 */
+@media(min-width: 800px){
+    .images_text{
+        display: flex;
+        align-items: flex-start;
+    }
+
+    #my_icon{
+        width: 80%;
+        height: 80%;
+    }
+
+    .images_text .images{
+        padding-left: 5%;
+    }
+
+    .images_text .url_list{
+        padding-right: 5%;
+    }
+}
+
+/* urlのリストのデザインを変更 */
+.url_list{
+    list-style-type: square;
+}
+
+a:visited{
+    color: rgb(144, 131, 131);
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+.black{
+    background-color: rgb(53, 50, 57);
+    background-size: cover;
+    color: white;
+}
+
+h3{
+    font-size: 2rem;
+    margin: 4% 0 2% 0;
+}
