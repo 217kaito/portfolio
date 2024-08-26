@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <!-- ほぼすべての文字に対応できる文字セットであるutf-8を用いる -->
+        <meta charset="utf-8">
+
+        <!-- タブなどに表示されるページタイトル -->
+        <title>Portfolio Kaito</title>
+
+        <!-- モバイルデバイスでの表示を制御 -->
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+
+        <!-- 著者名(あるといろいろ便利) -->
+        <meta name="author" content="Kaito">
+        <!-- ページ説明(書いてあると検索でかかりやすくなる) -->
+        <meta name="description" content="Portfolio of Kaito">
+
+        <!-- ページにアイコン(ファビコン)を追加する -->
+        <!-- linkタグにおけるtype属性は、リンク先のリソースの種類を指定するもの。
+         省略して、ブラウザが自動的にリソースの種類を推測させることが一般的。 -->
+        <link 
+        rel="icon" href="images/favicon16x16.ico" 
+        type="image/x-icon">
+        <!-- 様々なデバイスやブラウザに対応するために、複数サイズ用意するとよい -->
+        <link 
+        rel="icon" href="images/favicon32x32.ico" 
+        type="image/x-icon">
+
+        <!-- Bootstrap CSS (CSSフレームワークの一つ) を適用する(いずれもっと活用する) -->
+        <link 
+        rel="stylesheet" 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+        
+
+        <!-- CSSを適用する -->
+        <link rel="stylesheet" href="styles.css">
+
+        <!-- JavaScript を適用する(いずれ)-->
+         <!-- ヘッダーと、トップに戻るボタンは付けたい -->
+        <!-- <script src="my-portfolio.js" defer></script> -->
+    </head>
+    <body>
+        <h1>Kaito Portfolio</h1>
+        <div class="center">
+            <h2>Introduction</h2>
+            <p>
+                はじめまして。Kaitoと申します。<br>
+                現在、大学4年生として情報科学を専攻しています。<br>
+                <br>
+                こちらは、私のスキルや制作物、経歴をまとめたポートフォリオサイトです。<br>
+                <br>
+                至らない点も多いかと思いますが、ぜひご覧いただき、私に興味をお持ちいただけたら幸いです。
+            </p>
+        </div>
+        <div class="purple center">
+            <h2>Profile</h2>
+            <div class="images_text">
+                <span class="images">
+                    <img src="images/favicon.jpg" alt="kaitoのプロフィールアイコン" id="my_icon">
+                </span>
+                <ul>
+                    <li>名前: Kaito</li>
+                    <li>出身: 神奈川県</li>
+                    <li>学歴: 明治大学 理工学部 情報科学科 卒業予定 (2025年)</li>
+                    <li>趣味: 映画鑑賞, 読書, ランニング</li>
+                    <li>スキル: 
+                        <ul>
+                            <li>プログラミング言語: C, Python, Java, JavaScript</li>
+                            <li>バージョン管理ツール: GitHub</li>
+                        </ul>
+                    </li>
+                    <li><p>経験:<br>
+                        大学に入学した2021年から情報科学を学び始めました。<br>
+                        C, Java, Pythonなどのプログラム言語や、情報科学の基本的な知識を習得してきました。<br>
+                        <br>
+                        現在は、同大学の研究室でチームと共に研究を進めつつ、基本情報技術者試験の合格に向けて勉強中です。<br>
+                        <br>
+                        来年度からは同大学の大学院に進学予定です。
+                    </li>
+                </ul>
+                <br>
+                <br>
+                <ul class="url_list">
+                    <li><a href="https://github.com/217kaito" title="KaitoのGitHubページへ">GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="center">
+            <h2>Research</h2>
+            <h3>Research Overview</h3>
+            <p>
+                私たちは、<strong>深層学習を活用した大規模人流シミュレーションの実現に注力しています。</strong>
+            </p>
+            <p>
+                現在、100万人規模の大規模な人流シミュレーションには、<strong>MAS（Malti-Agent Simulation）</strong>が利用されています。<br>
+                MASでは<strong>人手で各エージェントの動き（経路決定）をロジック化</strong>しており、実際の人の動きを正確に模擬するために多くの研究が行われています。<br>
+                しかし、多種多様な条件や環境下で正確に経路決定をロジック化することは容易ではありません。
+            </p>
+            <p>    
+                そこで、<strong>経路決定に深層学習を適用することで、データを基に多種多様な条件下で経路決定を正確に模擬できる可能性があります。</strong><br>
+            </p>
+            <p>
+                <strong>私たちの研究では、経路予測のための深層学習モデルであるPECNetを、MASを用いた大規模人流シミュレーションへ応用することを目指します。</strong><br>
+            </p>
+            <h3>Team Projects</h3>
+            <ul>
+                <li>自分たちで設定したシチュエーションでMASを活用できるようにする。</li>
+                <li>PECNetの精度を向上させる。</li>
+            </ul>
+            <h3>Individual Projects</h3>
+            <p>
+                ハイパーパラメータチューニングをすることでPECNetの精度向上を目指す。
+                <ul>
+                    <li>
+                        簡単なニューラルネットワークにOptunaを用いてみる。
+                    </li>
+                    <li>
+                        Optunaについて検討する。
+                    </li>
+                    <li>
+                        PECNetにOptunaを用いて精度向上を目指す。
+                    </li>
+                </ul>
+            </p>
+        </div>
+        <div class="black center">
+            <h2>Contact</h2>
+            <a href="mailto:y.kaito4510@gmail.com">y.kaito4510@gmailcom</a>
+        </div>
+    </body>
+</html>
