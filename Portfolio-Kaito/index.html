@@ -31,13 +31,11 @@
         rel="stylesheet" 
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
         
+        <!-- CSSを適用する（Bootstrapの後に読み込むことで優先度を確保） -->
+        <link rel="stylesheet" href="styles.css?v=2">
 
-        <!-- CSSを適用する -->
-        <link rel="stylesheet" href="styles.css">
-
-        <!-- JavaScript を適用する(いずれ)-->
-         <!-- ヘッダーと、トップに戻るボタンは付けたい -->
-        <!-- <script src="my-portfolio.js" defer></script> -->
+        <!-- JavaScript を適用する -->
+        <script src="my-portfolio.js" defer></script>
     </head>
     <body>
         <h1>Kaito Portfolio</h1>
@@ -65,28 +63,16 @@
                     <li>学歴: 明治大学 理工学部 情報科学科 卒業 (2025年)、明治大学 理工学研究科 情報科学専攻 在学中 (2027年卒業予定)</li>
                     <li>趣味: 映画鑑賞, 読書, ランニング</li>
                     <li>資格: 基本情報技術者試験（合格）</li>
+                    <li><a href="https://github.com/217kaito" title="KaitoのGitHubページへ">GitHub</a></li>
                     <li>スキル: 
                         <ul>
                             <li>プログラミング経験（言語（経験年数）：代表的な成果物や用途）
                                 <ul>
-                                    <li>Python（2年）：Optunaによる深層学習モデルのハイパーパラメータ最適化
-                                        <a href="https://github.com/217kaito/Optuna-Practice" target="_blank">[GitHub]</a>
-                                    </li>
-                                    <li>C（3年）：チェイン法を用いたハッシュ表の登録・検索・削除を実装
-                                        <a href="https://github.com/217kaito/practice-programming/tree/main/Assignment/2022/Software-practical-training" target="_blank">[GitHub]</a>
-                                    </li>
+                                    <li>Python（2年）：<a href="https://github.com/217kaito/Optuna-Practice" target="_blank">Optunaによる深層学習モデルのハイパーパラメータ最適化</a></li>
+                                    <li>C（3年）：<a href="https://github.com/217kaito/practice-programming/tree/main/Assignment/2022/Software-practical-training" target="_blank">チェイン法を用いたハッシュ表の登録・検索・削除を実装</a></li>
                                     <li>TypeScript（1年）：Webアプリ開発インターンにて使用</li>
-                                    <li>Java（2年）：凸多角形の最小コスト三角分割問題に対する動的計画法アルゴリズムを実装
-                                        <a href="https://github.com/217kaito/practice-programming/tree/main/Assignment/2022/DSA-pratical-training2" target="_blank">[GitHub]</a>
-                                    </li>
+                                    <li>Java（2年）：<a href="https://github.com/217kaito/practice-programming/tree/main/Assignment/2022/DSA-pratical-training2" target="_blank">凸多角形の最小コスト三角分割問題に対する動的計画法アルゴリズムを実装</a></li>
                                     <li>HTML/CSS, C#, C++（1年）：基礎的な実装経験あり</li>
-                                </ul>
-                            </li>
-                            <li>開発経験
-                                <ul>
-                                    <li>Webアプリ開発インターン：3～5名規模のチーム開発で複数のプロジェクトに参画し、ReactとTypeScriptを使用して要件定義・実装・テストを担当</li>
-                                    <li>値引き率最適化アルゴリズム開発インターン：需要予測結果を基に、時間・商品ごとの値引き率最適化アルゴリズムをPythonで実装</li>
-                                    <li>深層学習モデル最適化研究：Optunaを用いて深層学習モデルの推論時間を約7.3％短縮</li>
                                 </ul>
                             </li>
                             <li>使用可能なツール・技術
@@ -98,24 +84,19 @@
                             </li>
                         </ul>
                     </li>
-                    <li><p>経験:<br>
-                        2021年から情報科学を専攻し、C, Java, Pythonなどのプログラミング言語や、情報科学の基本的な知識を習得してきました。<br>
-                        <br>
-                        インターン経験：<br>
-                        ・需要予測AI開発インターン（2024年11月～2025年2月）：食品関連の需要予測AIの作成に携わりました。<br>
-                        ・Webアプリ開発インターン（2025年2月～2025年10月）：ReactとTypeScriptを使用したWebアプリケーションの開発に従事しました。<br>
-                        <br>
-                        現在は、同大学の研究室でチームと共に研究を進めています。<br>
-                    </li>
-                </ul>
-                <br>
-                <br>
-                <ul class="url_list">
-                    <li><a href="https://github.com/217kaito" title="KaitoのGitHubページへ">GitHub</a></li>
                 </ul>
             </div>
         </div>
         <div class="center">
+            <h2>Experience</h2>
+            <ul>
+                <li><strong>需要予測AI開発インターン（2024年11月～2025年2月）</strong><br>
+                    食品関連の需要予測AIの作成に携わりました。需要予測結果を基に、時間・商品ごとの値引き率最適化アルゴリズムをPythonで実装しました。</li>
+                <li><strong>Webアプリ開発インターン（2025年2月～2025年10月）</strong><br>
+                    3～5名規模のチーム開発で複数のプロジェクトに参画し、ReactとTypeScriptを使用して要件定義・実装・テストを担当しました。</li>
+            </ul>
+        </div>
+        <div class="purple center">
             <h2>Research</h2>
             <h3>学部研究：軌道予測用深層学習モデルPECNetの推論時間短縮</h3>
             <p>
@@ -142,16 +123,22 @@
                 こうした知見を基に、高速に実行可能な形式へ変換できるようコンパイラを改善することで、MN-Coreの計算性能を一層高め、大規模な深層学習推論の高速化に貢献することを目指しています。
             </p>
         </div>
-        <div class="purple center">
+        <div class="center">
             <h2>Publications</h2>
             <p>
                 <strong>所属学会:</strong> 情報処理学会 人工知能と認知科学研究会（SIG-AI）<br>
                 <strong>発表題目:</strong> 軌道予測用深層学習モデルPECNetに対する推論時間短縮を目的としたハイパーパラメータ最適化
             </p>
         </div>
-        <div class="black center">
+        <div class="purple center">
             <h2>Contact</h2>
             <a href="mailto:y.kaito4510@gmail.com">y.kaito4510@gmail.com</a>
         </div>
+        <!-- トップに戻るボタン -->
+        <button id="scrollToTop" class="scroll-to-top" aria-label="トップに戻る">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 15l-6-6-6 6"/>
+            </svg>
+        </button>
     </body>
 </html>
