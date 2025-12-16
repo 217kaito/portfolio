@@ -31,13 +31,11 @@
         rel="stylesheet" 
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
         
+        <!-- CSSを適用する（Bootstrapの後に読み込むことで優先度を確保） -->
+        <link rel="stylesheet" href="styles.css?v=2">
 
-        <!-- CSSを適用する -->
-        <link rel="stylesheet" href="styles.css">
-
-        <!-- JavaScript を適用する(いずれ)-->
-         <!-- ヘッダーと、トップに戻るボタンは付けたい -->
-        <!-- <script src="my-portfolio.js" defer></script> -->
+        <!-- JavaScript を適用する -->
+        <script src="my-portfolio.js" defer></script>
     </head>
     <body>
         <h1>Kaito Portfolio</h1>
@@ -45,11 +43,13 @@
             <h2>Introduction</h2>
             <p>
                 はじめまして。Kaitoと申します。<br>
-                現在、大学4年生として情報科学を専攻しています。<br>
+                現在、修士１年生として情報科学を専攻しています。<br>
+                <br>
+                深層学習の高速化と最適化に興味を持ち、モデル側の最適化からプロセッサレベルでの高速化まで幅広く研究に取り組んでいます。<br>
+                学部では軌道予測用深層学習モデルPECNetの推論時間短縮を実現し、現在は深層学習専用プロセッサMN-Coreの計算性能向上に取り組んでいます。<br>
                 <br>
                 こちらは、私のスキルや制作物、経歴をまとめたポートフォリオサイトです。<br>
-                <br>
-                至らない点も多いかと思いますが、ぜひご覧いただき、私に興味をお持ちいただけたら幸いです。
+                ぜひご覧いただき、私に興味をお持ちいただけたら幸いです。
             </p>
         </div>
         <div class="purple center">
@@ -60,73 +60,94 @@
                 </span>
                 <ul>
                     <li>名前: Kaito</li>
-                    <li>出身: 神奈川県</li>
-                    <li>学歴: 明治大学 理工学部 情報科学科 卒業予定 (2025年)</li>
-                    <li>趣味: 映画鑑賞, 読書, ランニング</li>
-                    <li>資格: 基本情報技術者試験（合格）</li>
-                    <li>スキル: 
+                    <li>学歴: 
                         <ul>
-                            <li>プログラミング言語: C, Python, Java, JavaScript</li>
-                            <li>バージョン管理ツール: GitHub</li>
+                            <li>明治大学 理工学部 情報科学科 卒業 (2025年)</li>
+                            <li>明治大学 理工学研究科 情報科学専攻 在学中 (2027年卒業予定)</li>
                         </ul>
                     </li>
-                    <li><p>経験:<br>
-                        大学に入学した2021年から情報科学を学び始めました。<br>
-                        C, Java, Pythonなどのプログラム言語や、情報科学の基本的な知識を習得してきました。<br>
-                        <br>
-                        現在は、同大学の研究室でチームと共に研究を進めつつ、インターンとして食品関連の需要予測AIの作成に携わっています。<br>
-                        <br>
-                        来年度からは同大学の大学院に進学予定です。
+                    <li>趣味: 映画鑑賞, 読書, ランニング</li>
+                    <li>資格: 
+                        <ul>
+                            <li>普通自動車第一種免許</li>
+                            <li>基本情報技術者試験（合格）</li>
+                        </ul>
                     </li>
-                </ul>
-                <br>
-                <br>
-                <ul class="url_list">
                     <li><a href="https://github.com/217kaito" title="KaitoのGitHubページへ">GitHub</a></li>
+                    <li>スキル: 
+                        <ul>
+                            <li>プログラミング経験（言語（経験年数）：代表的な成果物や用途）
+                                <ul>
+                                    <li>Python（2年）：<a href="https://github.com/217kaito/Optuna-Practice" target="_blank">Optunaによる深層学習モデルのハイパーパラメータ最適化</a></li>
+                                    <li>C（3年）：<a href="https://github.com/217kaito/practice-programming/tree/main/Assignment/2022/Software-practical-training" target="_blank">チェイン法を用いたハッシュ表の登録・検索・削除を実装</a></li>
+                                    <li>TypeScript（1年）：Webアプリ開発インターンにて使用</li>
+                                    <li>Java（2年）：<a href="https://github.com/217kaito/practice-programming/tree/main/Assignment/2022/DSA-pratical-training2" target="_blank">凸多角形の最小コスト三角分割問題に対する動的計画法アルゴリズムを実装</a></li>
+                                    <li>HTML/CSS, C#, C++（1年）：基礎的な実装経験あり</li>
+                                </ul>
+                            </li>
+                            <li>使用可能なツール・技術
+                                <ul>
+                                    <li>開発ツール：Git/GitHub、Cursor、VSCode、Claude Code</li>
+                                    <li>インフラ：Docker、Linux、AWS EC2</li>
+                                    <li>データベース：MySQL、PostgreSQL</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
         <div class="center">
-            <h2>Research</h2>
-            <h3>Research Overview</h3>
-            <p>
-                私たちは、<strong>深層学習を活用した大規模人流シミュレーションの実現に注力しています。</strong>
-            </p>
-            <p>
-                現在、100万人規模の大規模な人流シミュレーションには、<strong>MAS（Malti-Agent Simulation）</strong>が利用されています。<br>
-                MASでは<strong>人手で各エージェントの動き（経路決定）をロジック化</strong>しており、実際の人の動きを正確に模擬するために多くの研究が行われています。<br>
-                しかし、多種多様な条件や環境下で正確に経路決定をロジック化することは容易ではありません。
-            </p>
-            <p>    
-                そこで、<strong>経路決定に深層学習を適用することで、データを基に多種多様な条件下で経路決定を正確に模擬できる可能性があります。</strong><br>
-            </p>
-            <p>
-                <strong>私たちの研究では、経路予測のための深層学習モデルであるPECNetを、MASを用いた大規模人流シミュレーションへ応用することを目指します。</strong><br>
-            </p>
-            <h3>Team Projects</h3>
+            <h2>Experience</h2>
             <ul>
-                <li>自分たちで設定したシチュエーションでMASを活用できるようにする。</li>
-                <li>PECNetの精度を向上させる。</li>
+                <li><strong>需要予測AI開発インターン（2024年11月～2025年2月）</strong><br>
+                    食品関連の需要予測AIの作成に携わりました。需要予測結果を基に、時間・商品ごとの値引き率最適化アルゴリズムをPythonで実装しました。</li>
+                <li><strong>Webアプリ開発インターン（2025年2月～2025年10月）</strong><br>
+                    3～5名規模のチーム開発で複数のプロジェクトに参画し、ReactとTypeScriptを使用して要件定義・実装・テストを担当しました。</li>
             </ul>
-            <h3>Individual Projects</h3>
+        </div>
+        <div class="purple center">
+            <h2>Research</h2>
+            <h3>学部研究：軌道予測用深層学習モデルPECNetの推論時間短縮</h3>
             <p>
-                ハイパーパラメータチューニングをすることでPECNetの精度向上を目指す。
-                <ul>
-                    <li>
-                        簡単なニューラルネットワークにOptunaを用いてみる。
-                    </li>
-                    <li>
-                        Optunaについて検討する。
-                    </li>
-                    <li>
-                        PECNetにOptunaを用いて精度向上を目指す。
-                    </li>
-                </ul>
+                大規模避難シミュレーションへの応用を目的として、深層学習モデル<strong>PECNet</strong>の改善に取り組みました。<br>
+                従来、100万人規模の避難シミュレーションには<strong>マルチエージェントシステム（MAS: Multi-Agent System）</strong>が用いられてきましたが、行動ルールを人手で設計する方式では避難行動を十分に再現できませんでした。<br>
+                高精度な経路予測を実現するPECNetを用いることでこの課題を克服できる可能性があるものの、大規模環境では推論時間の増大に伴うリアルタイム性の低下という問題が生じてしまいます。
+            </p>
+            <p>
+                そこで、ハイパーパラメータ最適化フレームワークである<strong>Optuna</strong>を用い、推論時間と精度に影響を与えるパラメータの最適化を行いました。<br>
+                推論時間は計算機状態による揺らぎが大きいため、各パラメータ値で複数回測定し、四分位範囲内データの平均を用いて評価することで信頼性を高めました。<br>
+                その結果、<strong>精度を維持したまま推論時間を約7.3%短縮するパラメータ値を特定することに成功しました</strong>。<br>
+                これにより、限られた計算資源下において、許容できる精度低下内で最適なモデル構成を選択するための知見を得ました。
+            </p>
+            <h3>修士研究：深層学習用プロセッサMN-Coreの計算性能向上</h3>
+            <p>
+                学部研究を通じて、推論時間は計算環境に大きく依存するため、モデル側の調整のみでは性能改善に限界があることを認識しました。<br>
+                また、深層学習で多用される行列演算は計算量が大きく、汎用プロセッサのみで効率的に処理することは難しくなりつつあります。<br>
+                このため、行列演算に特化したAI専用プロセッサの重要性が高まる中、<strong>MN-Core</strong>は高い電力効率を示す一方、性能発揮にはソフトウェアスタックの最適化が不可欠です。
+            </p>
+            <p>
+                以上の背景から、MLSDK（MN-Core向けのソフトウェア開発キット）の最適化によってより実用的な推論高速化に貢献したいと考え、本研究に取り組んでいます。<br>
+                MN-Coreには、PyTorchやJAXで作成したモデルを実行可能な形式に変換するコンパイラが備わっており、本研究ではその改善によるさらなる高速化を目指しています。<br>
+                具体的には、モデルのパラメータ値に応じた計算特性を測定し、MN-Coreに適した処理形態を把握することに取り組んでいます。<br>
+                こうした知見を基に、高速に実行可能な形式へ変換できるようコンパイラを改善することで、MN-Coreの計算性能を一層高め、大規模な深層学習推論の高速化に貢献することを目指しています。
             </p>
         </div>
-        <div class="black center">
-            <h2>Contact</h2>
-            <a href="mailto:y.kaito4510@gmail.com">y.kaito4510@gmailcom</a>
+        <div class="center">
+            <h2>Publications</h2>
+            <p>
+                SMASH25 Summer Symposium にて、「軌道予測用深層学習モデル PECNetに対する推論時間短縮を目的としたハイパーパラメータ最適化」を論文投稿し、対面発表を行いました。
+            </p>
         </div>
+        <div class="purple center">
+            <h2>Contact</h2>
+            <a href="mailto:y.kaito4510@gmail.com">y.kaito4510@gmail.com</a>
+        </div>
+        <!-- トップに戻るボタン -->
+        <button id="scrollToTop" class="scroll-to-top" aria-label="トップに戻る">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 15l-6-6-6 6"/>
+            </svg>
+        </button>
     </body>
 </html>
