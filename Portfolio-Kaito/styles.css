@@ -181,15 +181,21 @@ li {
 }
 
 li::before {
-    content: '▸';
+    content: '';
     position: absolute;
     left: 0;
-    color: #8b7cf6;
-    font-weight: bold;
+    top: 0.5em;
+    width: 8px;
+    height: 8px;
+    background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+    border-radius: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 2px 4px rgba(108, 92, 231, 0.3);
 }
 
 .purple li::before {
-    color: #c4b5fd;
+    background: linear-gradient(135deg, #a29bfe, #c4b5fd);
+    box-shadow: 0 2px 4px rgba(162, 155, 254, 0.4);
 }
 
 ul ul li {
@@ -202,14 +208,21 @@ ul ul li {
 }
 
 ul ul li::before {
-    content: '▪';
-    color: #bbb;
-    font-size: 0.9em;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.5em;
+    width: 6px;
+    height: 6px;
+    background: linear-gradient(135deg, #8b7cf6, #a29bfe);
+    border-radius: 2px;
+    transform: translateY(-50%) rotate(45deg);
+    box-shadow: 0 1px 3px rgba(139, 124, 246, 0.3);
 }
 
 .purple ul ul li::before {
-    color: #e0e0e0;
-    font-size: 0.9em;
+    background: linear-gradient(135deg, #c4b5fd, #e0e0e0);
+    box-shadow: 0 1px 3px rgba(196, 181, 253, 0.4);
 }
 
 /* リンクスタイル */
