@@ -9,6 +9,6 @@ Kaitoのポートフォリオサイト。
 
 1. リポジトリの Settings → Pages → Source を「GitHub Actions」に設定
 2. mainブランチにpush（またはdevelopからmainへマージ）
-3. `https://217kaito.github.io/portfolio/` で公開される
+3. 公開用リンクは[こちら](https://217kaito.github.io/portfolio/) 
 
 最終更新日: 2026/07/08
